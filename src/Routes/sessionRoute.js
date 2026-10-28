@@ -2,7 +2,7 @@ import express from 'express';
 import { createSession, getSessions, updateSessionDetailsById, updateSessionStatus } from '../Controllers/SessionController.js';
 import { validatePostSession } from '../Validators/validatePost.js';
 import { validateUpdateSession } from '../Validators/validatePatch.js';
-import requireAuth from '../Middlewares/Authenticate.js';
+import requireAuth from '../Middlewares/authenticate.js';
 
 
 const router = express.Router();
