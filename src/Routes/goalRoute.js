@@ -5,9 +5,7 @@ import { validateUpdateGoal } from '../Validators/validatePatch.js';
 import requireAuth from '../Middlewares/authenticate.js';
 
 const router = express.Router();
-const app = express();
-
-app.use(requireAuth)
+router.use(requireAuth)
 
 router.post('/', validatePostGoal, createGoal)
 

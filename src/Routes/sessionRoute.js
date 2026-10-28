@@ -1,14 +1,13 @@
 import express from 'express';
-import { createSession, getSessions, updateSessionDetailsById, updateSessionStatus } from '../Controllers/SessionController.js';
+import { createSession, getSessions, updateSessionDetailsById, updateSessionStatus } from '../Controllers/sessionController.js';
 import { validatePostSession } from '../Validators/validatePost.js';
 import { validateUpdateSession } from '../Validators/validatePatch.js';
 import requireAuth from '../Middlewares/authenticate.js';
 
 
 const router = express.Router();
-const app = express();
 
-app.use(requireAuth)
+router.use(requireAuth)
 
 router.post('/', validatePostSession, createSession);
 
