@@ -1,5 +1,5 @@
 import express from 'express';
-import requireAuth from '../Middlewares/Authenticate.js';
+import requireAuth from '../Middlewares/authenticate.js';
 import { validateSignUp, validateLogin } from '../Validators/validateUser.js';
 import { getMyProfile, loginUser, registerUser } from '../Controllers/UserController.js';
 
