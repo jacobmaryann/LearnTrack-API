@@ -1,5 +1,5 @@
 import express from 'express';
-import { createGoal,  getAllGoals, updateGoalById } from '../Controllers/GoalController.js';
+import { createGoal,  getAllGoals, updateGoalById } from '../Controllers/goalController.js';
 import { validatePostGoal } from '../Validators/validatePost.js';
 import { validateUpdateGoal } from '../Validators/validatePatch.js';
 import requireAuth from '../Middlewares/Authenticate.js';
