@@ -6,7 +6,7 @@ import bcrypt from 'bcrypt'
 
 
 const registerUser = asyncHandler(async (req, res) => {
-    const {userName, email, password} = req.body;
+    const {username, email, password} = req.body;
 
     const existingUser = await userModel.findOne({email});
     
@@ -18,7 +18,7 @@ const registerUser = asyncHandler(async (req, res) => {
     const hashed = await hashedPassword(password);
 
     const newUser = new userModel({
-        userName,
+        username,
         email,
         password:  hashed 
     });
