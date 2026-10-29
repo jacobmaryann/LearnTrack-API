@@ -57,6 +57,10 @@ const getSessions = asyncHandler(async (req, res) => {
       displayStatus: currentStatus //go to frontend
     };
   });
+  let result = formattedSessions;
+  if(status) {
+    result = formattedSessions.filter((s) => s.displayStatus === status);
+  }
 
   res.status(200).json(result);
 });
